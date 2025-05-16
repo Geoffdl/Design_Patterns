@@ -24,6 +24,14 @@ public class Avion
     
     private List<Passager> passagers = new ArrayList<>();
     
+    /**
+     * Constructeur
+     *
+     * @param idUnique id
+     * @param capacite capa
+     * @param roues    roues
+     */
+    @NePasUtiliser(description = "constructeur reservé à l'avionBuilder")
     Avion(String idUnique, int capacite, List<Roue> roues)
     {
         this.roues = roues;

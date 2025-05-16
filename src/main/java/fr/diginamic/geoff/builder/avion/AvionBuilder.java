@@ -2,6 +2,9 @@ package fr.diginamic.geoff.builder.avion;
 
 import java.util.List;
 
+/**
+ * takes parameters to build a plane
+ */
 public class AvionBuilder implements IAvionBuilder<Avion, AvionBuilder>
 {
     private Avion avion;
@@ -9,6 +12,13 @@ public class AvionBuilder implements IAvionBuilder<Avion, AvionBuilder>
     private int capacite;
     private List<Roue> roues;
     
+    /**
+     * Fluent constructeur pour construire un avion avec 3 éléments uniques et des elements optionnels appendable
+     *
+     * @param idUnique id de l'avion
+     * @param capacite capacité de l'avion
+     * @param roues    les roues de l'avion
+     */
     public AvionBuilder(String idUnique, int capacite, List<Roue> roues)
     {
         this.avion = new Avion(idUnique, capacite, roues);
@@ -65,9 +75,9 @@ public class AvionBuilder implements IAvionBuilder<Avion, AvionBuilder>
     @Override
     public AvionBuilder appendPostePilotage(String reference, double surface, int places, String refAp, String refGps, String refAltimetre, String refAutoPilote)
     {
-        
         AssistancePilotageBuilder apb = new AssistancePilotageBuilder(refAp);
-        AssistancePilotage assistancePilotage = apb.appendAltimetre(refAltimetre).appendGps(refGps).appendAutoPilote(refAutoPilote).build();
+        AssistancePilotage assistancePilotage = apb.appendAltimetre(refAltimetre).appendGps(refGps)
+                                                   .appendAutoPilote(refAutoPilote).build();
         
         this.avion.setPostePilotage(new PostePilotage(reference, surface, places, assistancePilotage));
         return this;

@@ -34,6 +34,10 @@ class AvionBuilderTest
                                   .appendSiege(1, Classe.BUSINESS, Rangee.A).appendSiege(2, Classe.BUSINESS, Rangee.B)
                                   .build();
         
+        superAvion.demarrer();
+        superAvion.decoller();
+        superAvion.atterir();
+        
         assertEquals("A123", superAvion.getIdUnique());
         assertEquals(100, superAvion.getCapacite());
         assertEquals(4, superAvion.getRoues().size());

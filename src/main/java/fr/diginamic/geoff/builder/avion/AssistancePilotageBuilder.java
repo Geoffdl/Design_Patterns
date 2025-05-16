@@ -1,5 +1,8 @@
 package fr.diginamic.geoff.builder.avion;
 
+/**
+ * takes parameters to build AP
+ */
 public class AssistancePilotageBuilder implements IAssistancePilotageBuilder<AssistancePilotage, AssistancePilotageBuilder>
 {
     private AssistancePilotage assistancePilotage;

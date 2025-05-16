@@ -12,6 +12,10 @@ public class AssistancePilotage
     private AutoPilote autoPilote;
     private GPS gps;
     
+    /**
+     * @param reference ref
+     */
+    @NePasUtiliser(description = "constructeur réservé à l'apBuilder")
     AssistancePilotage(String reference)
     {
         this.reference = reference;
