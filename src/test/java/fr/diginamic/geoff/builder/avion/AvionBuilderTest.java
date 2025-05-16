@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AvionBuilderTest
 {
     @Test
-    public void testBuildAvionWithPilotAndPassenger()
+    public void testAvionBuilder()
     {
         Roue roue1 = new Roue("roue1", 22);
         Roue roue2 = new Roue("roue2", 22);
@@ -26,14 +26,14 @@ class AvionBuilderTest
         AvionBuilder builder = new AvionBuilder("A123", 100, List.of(roue1, roue2, roue3, roue4));
         
         Avion superAvion = builder.appendPassager(passager1).appendPassager(passager2).appendPassager(passager3)
-                                  .appendPilote(pilote1).appendPilote(pilote2).appendModele("Airbus", ModeleAvion.A380)
+                                  .appendPilote(pilote1).appendPilote(pilote2).appendEquipage(equipage1)
+                                  .appendEquipage(equipage2).appendModele("Airbus", ModeleAvion.A380)
                                   .appendMoteur("3833993", TypeMoteur.BW272)
                                   .appendPostePilotage("FX303092", 5, 3, "zx283", "yw2928", "ty3838", "qw2837")
                                   .appendSiege(48, Classe.ECO, Rangee.A).appendSiege(48, Classe.ECO, Rangee.A)
                                   .appendSiege(1, Classe.BUSINESS, Rangee.A).appendSiege(2, Classe.BUSINESS, Rangee.B)
                                   .build();
         
-        // Asserts
         assertEquals("A123", superAvion.getIdUnique());
         assertEquals(100, superAvion.getCapacite());
         assertEquals(4, superAvion.getRoues().size());
