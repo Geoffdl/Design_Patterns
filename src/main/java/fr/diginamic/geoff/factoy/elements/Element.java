@@ -3,12 +3,19 @@ package fr.diginamic.geoff.factoy.elements;
 /**
  * parent class that food are made of
  */
-public class Element
+public abstract class Element
 {
     private final String nom;
     private final double valeur;
     private final Unite unite;
     
+    /**
+     * Constructor
+     *
+     * @param nom    de l'élément
+     * @param valeur poids de l'élément
+     * @param unite  unite de poids
+     */
     public Element(String nom, double valeur, Unite unite)
     {
         this.nom = nom;

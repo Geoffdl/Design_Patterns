@@ -11,6 +11,10 @@ public class ElementFactory implements IElementFactory
     @Override
     public Element getInstance(TypeElement type, String nom, double valeur, Unite unite)
     {
+        if (type == null)
+        {
+            return null;
+        }
         return switch (type)
         {
             case INGREDIENT -> new Ingredient(nom, valeur, unite);
