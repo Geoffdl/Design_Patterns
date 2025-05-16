@@ -41,3 +41,4 @@ build/
 .idea
 /src/main/java/fr/diginamic/geoff/refactoring/
 /src/main/java/fr/diginamic/geoff/cour/
+/src/main/java/fr/diginamic/geoff/builder/produits/
