@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 public class Roue
 {
@@ -13,7 +13,6 @@ public class Roue
     
     /**
      * Gets reference for the class Roue
-     *
      * @return value of reference
      */
     public String getReference()
@@ -23,7 +22,6 @@ public class Roue
     
     /**
      * Sets reference for the class Roue.
-     *
      * @param reference value of reference
      */
     public void setReference(String reference)
@@ -33,7 +31,6 @@ public class Roue
     
     /**
      * Gets tailleEnPouces for the class Roue
-     *
      * @return value of tailleEnPouces
      */
     public int getTailleEnPouces()
@@ -43,7 +40,6 @@ public class Roue
     
     /**
      * Sets tailleEnPouces for the class Roue.
-     *
      * @param tailleEnPouces value of tailleEnPouces
      */
     public void setTailleEnPouces(int tailleEnPouces)

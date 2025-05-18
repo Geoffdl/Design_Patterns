@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 import java.util.Objects;
 
@@ -17,7 +17,6 @@ public class Siege
     
     /**
      * Gets rangee for the class Siege
-     *
      * @return value of rangee
      */
     public Rangee getRangee()
@@ -27,7 +26,6 @@ public class Siege
     
     /**
      * Sets rangee for the class Siege.
-     *
      * @param rangee value of rangee
      */
     public void setRangee(Rangee rangee)
@@ -37,7 +35,6 @@ public class Siege
     
     /**
      * Gets classe for the class Siege
-     *
      * @return value of classe
      */
     public Classe getClasse()
@@ -47,7 +44,6 @@ public class Siege
     
     /**
      * Sets classe for the class Siege.
-     *
      * @param classe value of classe
      */
     public void setClasse(Classe classe)
@@ -57,7 +53,6 @@ public class Siege
     
     /**
      * Gets numero for the class Siege
-     *
      * @return value of numero
      */
     public int getNumero()
@@ -67,12 +62,17 @@ public class Siege
     
     /**
      * Sets numero for the class Siege.
-     *
      * @param numero value of numero
      */
     public void setNumero(int numero)
     {
         this.numero = numero;
+    }
+    
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(rangee, classe, numero);
     }
     
     @Override
@@ -83,11 +83,5 @@ public class Siege
             return false;
         }
         return numero == siege.numero && rangee == siege.rangee && classe == siege.classe;
-    }
-    
-    @Override
-    public int hashCode()
-    {
-        return Objects.hash(rangee, classe, numero);
     }
 }

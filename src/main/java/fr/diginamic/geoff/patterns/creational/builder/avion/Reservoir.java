@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 public class Reservoir
 {
@@ -13,7 +13,6 @@ public class Reservoir
     
     /**
      * Gets reference for the class Reservoir
-     *
      * @return value of reference
      */
     public String getReference()
@@ -23,7 +22,6 @@ public class Reservoir
     
     /**
      * Sets reference for the class Reservoir.
-     *
      * @param reference value of reference
      */
     public void setReference(String reference)
@@ -33,7 +31,6 @@ public class Reservoir
     
     /**
      * Gets capacite for the class Reservoir
-     *
      * @return value of capacite
      */
     public double getCapacite()
@@ -43,7 +40,6 @@ public class Reservoir
     
     /**
      * Sets capacite for the class Reservoir.
-     *
      * @param capacite value of capacite
      */
     public void setCapacite(double capacite)

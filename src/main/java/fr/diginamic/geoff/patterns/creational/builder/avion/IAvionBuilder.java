@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 public interface IAvionBuilder<T, D>
 {
@@ -14,8 +14,8 @@ public interface IAvionBuilder<T, D>
     
     D appendSiege(int numeroSiege, Classe classeSiege, Rangee rangee);
     
-    D appendPostePilotage(String reference, double surface, int places, String refAp, String refGps, String refAltimetre, String refAutoPilote);
+    D appendPostePilotage(String reference, double surface, int places, String refAp, String refGps,
+                          String refAltimetre, String refAutoPilote);
     
     D appendMoteur(String reference, TypeMoteur typeMoteur);
-    
 }

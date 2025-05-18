@@ -1,8 +1,7 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 /**
  * Interface pour AP builder
- *
  * @param <T> target entity
  * @param <D> builder entity
  */
@@ -10,14 +9,12 @@ public interface IAssistancePilotageBuilder<T, D>
 {
     /**
      * finish construction
-     *
      * @return constructed T
      */
     T build();
     
     /**
      * add Gps
-     *
      * @param reference gps ref
      * @return append builder
      */
@@ -25,7 +22,6 @@ public interface IAssistancePilotageBuilder<T, D>
     
     /**
      * add Gps
-     *
      * @param reference gps ref
      * @return append builder
      */
@@ -33,7 +29,6 @@ public interface IAssistancePilotageBuilder<T, D>
     
     /**
      * add Gps
-     *
      * @param reference gps ref
      * @return append builder
      */

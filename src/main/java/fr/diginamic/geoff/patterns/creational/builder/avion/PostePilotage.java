@@ -1,11 +1,10 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 public class PostePilotage
 {
     private String reference;
     private double surface;
     private int places;
-    
     private AssistancePilotage assistancePilotage;
     
     public PostePilotage(String reference, double surface, int places, AssistancePilotage assistancePilotage)
@@ -18,7 +17,6 @@ public class PostePilotage
     
     /**
      * Gets assistancePilotage for the class PostePilotage
-     *
      * @return value of assistancePilotage
      */
     public AssistancePilotage getAssistancePilotage()
@@ -28,7 +26,6 @@ public class PostePilotage
     
     /**
      * Sets assistancePilotage for the class PostePilotage.
-     *
      * @param assistancePilotage value of assistancePilotage
      */
     public void setAssistancePilotage(AssistancePilotage assistancePilotage)
@@ -38,7 +35,6 @@ public class PostePilotage
     
     /**
      * Gets reference for the class PostePilotage
-     *
      * @return value of reference
      */
     public String getReference()
@@ -48,7 +44,6 @@ public class PostePilotage
     
     /**
      * Sets reference for the class PostePilotage.
-     *
      * @param reference value of reference
      */
     public void setReference(String reference)
@@ -58,7 +53,6 @@ public class PostePilotage
     
     /**
      * Gets surface for the class PostePilotage
-     *
      * @return value of surface
      */
     public double getSurface()
@@ -68,7 +62,6 @@ public class PostePilotage
     
     /**
      * Sets surface for the class PostePilotage.
-     *
      * @param surface value of surface
      */
     public void setSurface(double surface)
@@ -78,7 +71,6 @@ public class PostePilotage
     
     /**
      * Gets places for the class PostePilotage
-     *
      * @return value of places
      */
     public int getPlaces()
@@ -88,7 +80,6 @@ public class PostePilotage
     
     /**
      * Sets places for the class PostePilotage.
-     *
      * @param places value of places
      */
     public void setPlaces(int places)

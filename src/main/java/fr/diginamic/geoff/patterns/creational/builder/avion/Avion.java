@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,28 +10,22 @@ public class Avion
     private LocalDate miseEnCirculation;
     private LocalDate dateDerniereMaintenance;
     private int capacite;
-    
     private PostePilotage postePilotage;
     private Modele modeleAvion;
-    
     private List<Pilote> pilotes = new ArrayList<>();
     private List<Equipage> equipages = new ArrayList<>();
-    
     private Moteur moteur;
     private List<Siege> sieges = new ArrayList<>();
-    
     private List<Roue> roues = new ArrayList<>();
-    
     private List<Passager> passagers = new ArrayList<>();
     
     /**
      * Constructeur
-     *
      * @param idUnique id
      * @param capacite capa
      * @param roues    roues
      */
-    @NePasUtiliser(description = "constructeur reservé à l'avionBuilder")
+    @NePasUtiliser(description = "constructeur reservé à avionBuilder")
     Avion(String idUnique, int capacite, List<Roue> roues)
     {
         this.roues = roues;
@@ -41,7 +35,6 @@ public class Avion
     
     /**
      * Gets moteur for the class Avion
-     *
      * @return value of moteur
      */
     public Moteur getMoteur()
@@ -51,7 +44,6 @@ public class Avion
     
     /**
      * Sets moteur for the class Avion.
-     *
      * @param moteur value of moteur
      */
     public void setMoteur(Moteur moteur)
@@ -61,7 +53,6 @@ public class Avion
     
     /**
      * Gets modeleAvion for the class Avion
-     *
      * @return value of modeleAvion
      */
     public Modele getModeleAvion()
@@ -71,7 +62,6 @@ public class Avion
     
     /**
      * Sets modeleAvion for the class Avion.
-     *
      * @param modeleAvion value of modeleAvion
      */
     public void setModeleAvion(Modele modeleAvion)
@@ -81,7 +71,6 @@ public class Avion
     
     /**
      * Gets idUnique for the class Avion
-     *
      * @return value of idUnique
      */
     public String getIdUnique()
@@ -91,7 +80,6 @@ public class Avion
     
     /**
      * Sets idUnique for the class Avion.
-     *
      * @param idUnique value of idUnique
      */
     public void setIdUnique(String idUnique)
@@ -101,7 +89,6 @@ public class Avion
     
     /**
      * Gets miseEnCirculation for the class Avion
-     *
      * @return value of miseEnCirculation
      */
     public LocalDate getMiseEnCirculation()
@@ -111,7 +98,6 @@ public class Avion
     
     /**
      * Sets miseEnCirculation for the class Avion.
-     *
      * @param miseEnCirculation value of miseEnCirculation
      */
     public void setMiseEnCirculation(LocalDate miseEnCirculation)
@@ -121,7 +107,6 @@ public class Avion
     
     /**
      * Gets dateDerniereMaintenance for the class Avion
-     *
      * @return value of dateDerniereMaintenance
      */
     public LocalDate getDateDerniereMaintenance()
@@ -131,7 +116,6 @@ public class Avion
     
     /**
      * Sets dateDerniereMaintenance for the class Avion.
-     *
      * @param dateDerniereMaintenance value of dateDerniereMaintenance
      */
     public void setDateDerniereMaintenance(LocalDate dateDerniereMaintenance)
@@ -141,7 +125,6 @@ public class Avion
     
     /**
      * Gets capacite for the class Avion
-     *
      * @return value of capacite
      */
     public int getCapacite()
@@ -151,7 +134,6 @@ public class Avion
     
     /**
      * Sets capacite for the class Avion.
-     *
      * @param capacite value of capacite
      */
     public void setCapacite(int capacite)
@@ -161,7 +143,6 @@ public class Avion
     
     /**
      * Gets postePilotage for the class Avion
-     *
      * @return value of postePilotage
      */
     public PostePilotage getPostePilotage()
@@ -171,7 +152,6 @@ public class Avion
     
     /**
      * Sets postePilotage for the class Avion.
-     *
      * @param postePilotage value of postePilotage
      */
     public void setPostePilotage(PostePilotage postePilotage)
@@ -181,7 +161,6 @@ public class Avion
     
     /**
      * Gets pilotes for the class Avion
-     *
      * @return value of pilotes
      */
     public List<Pilote> getPilotes()
@@ -191,7 +170,6 @@ public class Avion
     
     /**
      * Sets pilotes for the class Avion.
-     *
      * @param pilotes value of pilotes
      */
     public void setPilotes(List<Pilote> pilotes)
@@ -201,7 +179,6 @@ public class Avion
     
     /**
      * Gets equipages for the class Avion
-     *
      * @return value of equipages
      */
     public List<Equipage> getEquipages()
@@ -211,7 +188,6 @@ public class Avion
     
     /**
      * Sets equipages for the class Avion.
-     *
      * @param equipages value of equipages
      */
     public void setEquipages(List<Equipage> equipages)
@@ -221,7 +197,6 @@ public class Avion
     
     /**
      * Gets sieges for the class Avion
-     *
      * @return value of sieges
      */
     public List<Siege> getSieges()
@@ -231,7 +206,6 @@ public class Avion
     
     /**
      * Sets sieges for the class Avion.
-     *
      * @param sieges value of sieges
      */
     public void setSieges(List<Siege> sieges)
@@ -241,7 +215,6 @@ public class Avion
     
     /**
      * Gets roues for the class Avion
-     *
      * @return value of roues
      */
     public List<Roue> getRoues()
@@ -251,7 +224,6 @@ public class Avion
     
     /**
      * Sets roues for the class Avion.
-     *
      * @param roues value of roues
      */
     public void setRoues(List<Roue> roues)
@@ -261,7 +233,6 @@ public class Avion
     
     /**
      * Gets passagers for the class Avion
-     *
      * @return value of passagers
      */
     public List<Passager> getPassagers()
@@ -271,7 +242,6 @@ public class Avion
     
     /**
      * Sets passagers for the class Avion.
-     *
      * @param passagers value of passagers
      */
     public void setPassagers(List<Passager> passagers)

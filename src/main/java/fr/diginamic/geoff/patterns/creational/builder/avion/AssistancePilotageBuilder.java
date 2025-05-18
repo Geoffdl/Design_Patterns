@@ -1,12 +1,12 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 /**
  * takes parameters to build AP
  */
-public class AssistancePilotageBuilder implements IAssistancePilotageBuilder<AssistancePilotage, AssistancePilotageBuilder>
+public class AssistancePilotageBuilder
+      implements IAssistancePilotageBuilder<AssistancePilotage, AssistancePilotageBuilder>
 {
-    private AssistancePilotage assistancePilotage;
-    private String reference;
+    private final AssistancePilotage assistancePilotage;
     
     public AssistancePilotageBuilder(String reference)
     {

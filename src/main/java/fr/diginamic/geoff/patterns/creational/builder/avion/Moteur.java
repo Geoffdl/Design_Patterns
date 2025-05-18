@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 import java.time.Year;
 
@@ -7,7 +7,6 @@ public class Moteur
     private String reference;
     private double mileage;
     private Year anneeConstruction;
-    
     private TypeMoteur typeMoteur;
     
     public Moteur(String reference, double mileage, TypeMoteur typeMoteur)
@@ -20,7 +19,6 @@ public class Moteur
     
     /**
      * Gets reference for the class Moteur
-     *
      * @return value of reference
      */
     public String getReference()
@@ -30,7 +28,6 @@ public class Moteur
     
     /**
      * Sets reference for the class Moteur.
-     *
      * @param reference value of reference
      */
     public void setReference(String reference)
@@ -40,7 +37,6 @@ public class Moteur
     
     /**
      * Gets mileage for the class Moteur
-     *
      * @return value of mileage
      */
     public double getMileage()
@@ -50,7 +46,6 @@ public class Moteur
     
     /**
      * Sets mileage for the class Moteur.
-     *
      * @param mileage value of mileage
      */
     public void setMileage(double mileage)
@@ -60,7 +55,6 @@ public class Moteur
     
     /**
      * Gets anneeConstruction for the class Moteur
-     *
      * @return value of anneeConstruction
      */
     public Year getAnneeConstruction()
@@ -70,7 +64,6 @@ public class Moteur
     
     /**
      * Sets anneeConstruction for the class Moteur.
-     *
      * @param anneeConstruction value of anneeConstruction
      */
     public void setAnneeConstruction(Year anneeConstruction)
@@ -80,7 +73,6 @@ public class Moteur
     
     /**
      * Gets typeMoteur for the class Moteur
-     *
      * @return value of typeMoteur
      */
     public TypeMoteur getTypeMoteur()
@@ -90,7 +82,6 @@ public class Moteur
     
     /**
      * Sets typeMoteur for the class Moteur.
-     *
      * @param typeMoteur value of typeMoteur
      */
     public void setTypeMoteur(TypeMoteur typeMoteur)

@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 public class Modele
 {
@@ -13,7 +13,6 @@ public class Modele
     
     /**
      * Gets constructeur for the class Modele
-     *
      * @return value of constructeur
      */
     public String getConstructeur()
@@ -23,7 +22,6 @@ public class Modele
     
     /**
      * Sets constructeur for the class Modele.
-     *
      * @param constructeur value of constructeur
      */
     public void setConstructeur(String constructeur)
@@ -33,7 +31,6 @@ public class Modele
     
     /**
      * Gets avion for the class Modele
-     *
      * @return value of avion
      */
     public ModeleAvion getModeleAvion()
@@ -43,7 +40,6 @@ public class Modele
     
     /**
      * Sets avion for the class Modele.
-     *
      * @param modeleAvion value of avion
      */
     public void setModeleAvion(ModeleAvion modeleAvion)

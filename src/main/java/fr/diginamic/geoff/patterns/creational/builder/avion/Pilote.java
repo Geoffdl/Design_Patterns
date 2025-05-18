@@ -1,19 +1,18 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
-public class Equipage
+public class Pilote
 {
     private String nom;
     private String prenom;
     
-    public Equipage(String nom, String prenom)
+    public Pilote(String nom, String prenom)
     {
         this.nom = nom;
         this.prenom = prenom;
     }
     
     /**
-     * Gets nom for the class Equipage
-     *
+     * Gets nom for the class Pilote
      * @return value of nom
      */
     public String getNom()
@@ -22,8 +21,7 @@ public class Equipage
     }
     
     /**
-     * Sets nom for the class Equipage.
-     *
+     * Sets nom for the class Pilote.
      * @param nom value of nom
      */
     public void setNom(String nom)
@@ -32,8 +30,7 @@ public class Equipage
     }
     
     /**
-     * Gets prenom for the class Equipage
-     *
+     * Gets prenom for the class Pilote
      * @return value of prenom
      */
     public String getPrenom()
@@ -42,8 +39,7 @@ public class Equipage
     }
     
     /**
-     * Sets prenom for the class Equipage.
-     *
+     * Sets prenom for the class Pilote.
      * @param prenom value of prenom
      */
     public void setPrenom(String prenom)

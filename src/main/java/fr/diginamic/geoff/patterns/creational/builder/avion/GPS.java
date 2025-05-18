@@ -1,17 +1,16 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
-public class Altimetre
+public class GPS
 {
     private String reference;
     
-    public Altimetre(String reference)
+    public GPS(String reference)
     {
         this.reference = reference;
     }
     
     /**
-     * Gets reference for the class Altimetre
-     *
+     * Gets reference for the class GPS
      * @return value of reference
      */
     public String getReference()
@@ -20,8 +19,7 @@ public class Altimetre
     }
     
     /**
-     * Sets reference for the class Altimetre.
-     *
+     * Sets reference for the class GPS.
      * @param reference value of reference
      */
     public void setReference(String reference)

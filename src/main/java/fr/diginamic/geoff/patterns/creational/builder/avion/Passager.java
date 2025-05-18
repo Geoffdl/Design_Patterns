@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 public class Passager
 {
@@ -15,7 +15,6 @@ public class Passager
     
     /**
      * Gets nom for the class Passager
-     *
      * @return value of nom
      */
     public String getNom()
@@ -25,7 +24,6 @@ public class Passager
     
     /**
      * Sets nom for the class Passager.
-     *
      * @param nom value of nom
      */
     public void setNom(String nom)
@@ -35,7 +33,6 @@ public class Passager
     
     /**
      * Gets prenom for the class Passager
-     *
      * @return value of prenom
      */
     public String getPrenom()
@@ -45,7 +42,6 @@ public class Passager
     
     /**
      * Sets prenom for the class Passager.
-     *
      * @param prenom value of prenom
      */
     public void setPrenom(String prenom)
@@ -55,7 +51,6 @@ public class Passager
     
     /**
      * Gets numeroIdentite for the class Passager
-     *
      * @return value of numeroIdentite
      */
     public String getNumeroIdentite()
@@ -65,7 +60,6 @@ public class Passager
     
     /**
      * Sets numeroIdentite for the class Passager.
-     *
      * @param numeroIdentite value of numeroIdentite
      */
     public void setNumeroIdentite(String numeroIdentite)

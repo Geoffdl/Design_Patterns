@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
 import java.util.List;
 
@@ -14,7 +14,6 @@ public class AvionBuilder implements IAvionBuilder<Avion, AvionBuilder>
     
     /**
      * Fluent constructeur pour construire un avion avec 3 éléments uniques et des elements optionnels appendable
-     *
      * @param idUnique id de l'avion
      * @param capacite capacité de l'avion
      * @param roues    les roues de l'avion
@@ -73,7 +72,8 @@ public class AvionBuilder implements IAvionBuilder<Avion, AvionBuilder>
     }
     
     @Override
-    public AvionBuilder appendPostePilotage(String reference, double surface, int places, String refAp, String refGps, String refAltimetre, String refAutoPilote)
+    public AvionBuilder appendPostePilotage(String reference, double surface, int places, String refAp, String refGps,
+                                            String refAltimetre, String refAutoPilote)
     {
         AssistancePilotageBuilder apb = new AssistancePilotageBuilder(refAp);
         AssistancePilotage assistancePilotage = apb.appendAltimetre(refAltimetre).appendGps(refGps)
@@ -89,5 +89,4 @@ public class AvionBuilder implements IAvionBuilder<Avion, AvionBuilder>
         this.avion.setMoteur(new Moteur(reference, 0, typeMoteur));
         return this;
     }
-    
 }

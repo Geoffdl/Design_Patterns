@@ -1,17 +1,16 @@
-package fr.diginamic.geoff.builder.avion;
+package fr.diginamic.geoff.patterns.creational.builder.avion;
 
-public class GPS
+public class AutoPilote
 {
     private String reference;
     
-    public GPS(String reference)
+    public AutoPilote(String reference)
     {
         this.reference = reference;
     }
     
     /**
-     * Gets reference for the class GPS
-     *
+     * Gets reference for the class AutoPilote
      * @return value of reference
      */
     public String getReference()
@@ -20,8 +19,7 @@ public class GPS
     }
     
     /**
-     * Sets reference for the class GPS.
-     *
+     * Sets reference for the class AutoPilote.
      * @param reference value of reference
      */
     public void setReference(String reference)
