@@ -1,13 +1,12 @@
-package fr.diginamic.geoff.factoy.factory;
+package fr.diginamic.geoff.patterns.creational.factoy.factory;
 
-import fr.diginamic.geoff.factoy.elements.*;
+import fr.diginamic.geoff.patterns.creational.factoy.elements.*;
 
 /**
  * Implementation of the elementFactory interface
  */
 public class ElementFactory implements IElementFactory
 {
-    
     @Override
     public Element getInstance(TypeElement type, String nom, double valeur, Unite unite)
     {

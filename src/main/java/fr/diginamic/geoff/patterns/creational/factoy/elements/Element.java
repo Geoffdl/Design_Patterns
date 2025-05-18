@@ -1,4 +1,4 @@
-package fr.diginamic.geoff.factoy.elements;
+package fr.diginamic.geoff.patterns.creational.factoy.elements;
 
 /**
  * parent class that food are made of
@@ -11,7 +11,6 @@ public abstract class Element
     
     /**
      * Constructor
-     *
      * @param nom    de l'élément
      * @param valeur poids de l'élément
      * @param unite  unite de poids
@@ -25,7 +24,6 @@ public abstract class Element
     
     /**
      * Gets nom for the class Element
-     *
      * @return value of nom
      */
     public String getNom()
@@ -35,7 +33,6 @@ public abstract class Element
     
     /**
      * Gets valeur for the class Element
-     *
      * @return value of valeur
      */
     public double getValeur()
@@ -45,12 +42,10 @@ public abstract class Element
     
     /**
      * Gets unite for the class Element
-     *
      * @return value of unite
      */
     public Unite getUnite()
     {
         return unite;
     }
-    
 }

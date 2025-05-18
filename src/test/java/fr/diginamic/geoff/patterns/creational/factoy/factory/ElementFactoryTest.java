@@ -1,6 +1,6 @@
-package fr.diginamic.geoff.factoy.factory;
+package fr.diginamic.geoff.patterns.creational.factoy.factory;
 
-import fr.diginamic.geoff.factoy.elements.*;
+import fr.diginamic.geoff.patterns.creational.factoy.elements.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -33,5 +33,4 @@ public class ElementFactoryTest
         Element allergene = factory.getInstance(TypeElement.ALLERGENE, "crustace", 150, Unite.MICRO_GRAMMES);
         assertInstanceOf(Allergene.class, allergene);
     }
-    
 }
