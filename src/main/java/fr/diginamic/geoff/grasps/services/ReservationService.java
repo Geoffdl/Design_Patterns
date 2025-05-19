@@ -6,6 +6,7 @@ import fr.diginamic.geoff.grasps.beans.Reservation;
 import fr.diginamic.geoff.grasps.beans.TypeReservation;
 import fr.diginamic.geoff.grasps.builders.ReservationBuilder;
 import fr.diginamic.geoff.grasps.daos.ClientDao;
+import fr.diginamic.geoff.grasps.daos.Dao;
 import fr.diginamic.geoff.grasps.daos.TypeReservationDao;
 
 /**
@@ -13,8 +14,8 @@ import fr.diginamic.geoff.grasps.daos.TypeReservationDao;
  */
 public class ReservationService
 {
-    private ClientDao clientDao;
-    private TypeReservationDao typeReservationDao;
+    private Dao<Client> clientDao;
+    private Dao<TypeReservation> typeReservationDao;
     
     public ReservationService()
     {
@@ -24,13 +25,13 @@ public class ReservationService
     
     public Reservation createReservation(Params params) throws ReservationException
     {
-        Client client = clientDao.extraireClient(params.getIdentifiantClient());
+        Client client = clientDao.getById(params.getIdentifiantClient());
         if (client == null)
         {
             throw new ReservationException("Couldn't extract client data");
         }
         
-        TypeReservation typeReservation = typeReservationDao.extraireTypeReservation(params.getTypeReservation());
+        TypeReservation typeReservation = typeReservationDao.getById(params.getTypeReservation());
         if (typeReservation == null)
         {
             throw new ReservationException("Couldn't extract typeReservation data");
