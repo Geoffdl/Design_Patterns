@@ -15,11 +15,11 @@ public class InsertionSort implements ISortStrategy
     @Override
     public void sort(Integer[] args)
     {
-        for (int k = 1; k < args.length - 1; k++)
+        for (int k = 1; k < args.length; k++)
         {
             int temp = args[k];
             int j = k - 1;
-            while (j >= 0 && temp <= args[j])
+            while (j >= 0 && temp < args[j])
             {
                 args[j + 1] = args[j];
                 j = j - 1;

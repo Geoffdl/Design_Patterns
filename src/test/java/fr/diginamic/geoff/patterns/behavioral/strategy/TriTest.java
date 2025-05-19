@@ -2,7 +2,10 @@ package fr.diginamic.geoff.patterns.behavioral.strategy;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.Random;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TriTest
 {
@@ -29,15 +32,28 @@ class TriTest
         }
         
         // Bubble Sort
-        Integer[] bubbleArray = array.clone();
+        Integer[] bubbleArray = Arrays.copyOf(array, n);
         bubbleSort.exec(bubbleArray);
-        
+        assertTrue(isSorted(bubbleArray));
         // Insertion Sort
-        Integer[] insertionArray = array.clone();
+        Integer[] insertionArray = Arrays.copyOf(array, n);
         insertionSort.exec(insertionArray);
-        
+        assertTrue(isSorted(insertionArray));
         // Selection Sort
-        Integer[] selectionArray = array.clone();
+        Integer[] selectionArray = Arrays.copyOf(array, n);
         selectionSort.exec(selectionArray);
+        assertTrue(isSorted(selectionArray));
+    }
+    
+    private static boolean isSorted(Integer[] array)
+    {
+        for (int i = 1; i < array.length; i++)
+        {
+            if (array[i - 1] > array[i])
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
