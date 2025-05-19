@@ -37,5 +37,11 @@ class IElementTest
         assertEquals(11_000, salaireService1, DELTA);
         assertEquals(11_000, salaireService2, DELTA);
         assertEquals(18_000, salaireService3, DELTA);
+        
+        service1.addElement(service2);
+        service1.addElement(service3);
+        
+        salaireService1 = service1.calculerSalaire();
+        assertEquals(40_000, salaireService1, DELTA);
     }
 }
