@@ -1,19 +1,43 @@
 package fr.diginamic.geoff.patterns.behavioral.strategy;
 
+import fr.diginamic.geoff.patterns.behavioral.strategy.sort_algorithms_factory.SortStrategyFactory;
+
+/**
+ * Sorting calculation class, utilises a strategy pattern for the sorting algorithm and a factory pattern to generate the alternatives (bubble, insertion, selection)
+ */
 public class Tri
 {
-    ISortStrategyFactory factory = new SortStrategyFactory();
+    private final SortStrategyFactory factory;
+    private ISortStrategy sortStrategy;
     
-    public void exec(int typeTri, Integer[] arr)
+    public Tri()
     {
-        switch (typeTri)
+        this.factory = new SortStrategyFactory();
+    }
+    
+    /**
+     * execute the sorting of an array
+     * @param arr array of integers
+     */
+    public void exec(Integer[] arr)
+    {
+        if (sortStrategy == null)
         {
-            case 1:
-                factory.getSortStrategy(TypeSort.BUBBLE).sort(arr);
-            case 2:
-                factory.getSortStrategy(TypeSort.INSERTION).sort(arr);
-            case 3:
-                factory.getSortStrategy(TypeSort.SELECTION).sort(arr);
+            throw new NoStrategyException("must set a strategy");
         }
+        long startTime = System.currentTimeMillis();
+        sortStrategy.sort(arr);
+        long endTime = System.currentTimeMillis();
+        System.out.println(sortStrategy.getClass().getSimpleName());
+        System.out.println("Performance: " + (endTime - startTime) + " ms");
+    }
+    
+    /**
+     * Changes strategy for sorting algorithm
+     * @param typeSort type of algorithm (bubble, insertion or selection)
+     */
+    public void changeStrategy(TypeSort typeSort)
+    {
+        this.sortStrategy = factory.getStrategy(typeSort);
     }
 }
