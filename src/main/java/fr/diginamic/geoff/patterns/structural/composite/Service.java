@@ -55,7 +55,7 @@ public class Service implements IElement
      */
     public List<IElement> getiElementList()
     {
-        return iElementList;
+        return List.of(iElementList.toArray(new IElement[0]));
     }
     
     /**
